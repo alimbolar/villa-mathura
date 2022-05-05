@@ -9,5 +9,9 @@ form {
 
   input {
     text-align: center;
+
+    &::placeholder {
+      color: gray;
+    }
   }
 }
