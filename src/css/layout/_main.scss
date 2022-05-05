@@ -24,3 +24,10 @@ hr {
   margin-block: 3rem;
   max-width: 20rem;
 }
+
+.rooms {
+  .icon {
+    color: var(--primary-color-light);
+    font-size: calc(3 * var(--font-size));
+  }
+}
