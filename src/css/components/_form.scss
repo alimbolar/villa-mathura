@@ -7,8 +7,15 @@ form {
 
   margin-block: 2rem;
 
-  input {
+  input,
+  textarea {
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
     text-align: center;
+    font-size: calc(0.9 * var(--font-size));
+
+    border: none;
+    border-bottom: 1px solid gray;
 
     &::placeholder {
       color: gray;
