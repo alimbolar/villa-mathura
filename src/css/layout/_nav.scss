@@ -1,0 +1,34 @@
+nav {
+  .nav__wrapper {
+    display: block;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 10;
+
+    &.hidden {
+      display: none;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    li {
+      padding-block: 1rem;
+      margin-block: 0.5rem;
+      text-transform: uppercase;
+      font-size: calc(1 * var(--font-size));
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.menu {
+  --menu-width: 2.5rem;
+  --thickness-ratio: 0.1;
+  width: var(--menu-width);
+  height: var(--menu-width);
+  // border-radius: 1rem;
+  // background-color: hsla(0, 50%, 50%, 0.5);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    width: 66%;
+    height: calc(var(--thickness-ratio) * var(--menu-width));
+    // border-radius: calc(var(--thickness-ratio) * var(--menu-width));
+    background-color: hsl(0, 100%, 100%);
+    position: relative;
+    transition: transform 0.2s;
+
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      content: " ";
+      width: 100%;
+      height: calc(var(--thickness-ratio) * var(--menu-width));
+      // border-radius: calc(var(--thickness-ratio) * var(--menu-width));
+      background-color: hsl(0, 100%, 100%);
+      transition: transform 0.2s;
+    }
+
+    &:before {
+      top: calc((2.7 * var(--thickness-ratio)) * var(--menu-width));
+    }
+    &:after {
+      top: calc((-2.7 * var(--thickness-ratio)) * var(--menu-width));
+    }
+
+    &.toggled {
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(-0.5em, -0.5em);
+      }
+      &::after {
+        transform: rotate(-45deg) translate(-0.5em, 0.5em);
+
+        // background-color: black;
+      }
+    }
+  }
+}

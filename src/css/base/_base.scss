@@ -1,0 +1,39 @@
+:root {
+  --primary-color: hsla(125, 100%, 20%, 1);
+  --font-size: 1rem;
+  --header-height: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+
+section {
+  margin-block-end: 3rem;
+}
+
+img {
+  width: 100%;
+}
+
+// figure {
+//   width: max-content;
+//   height: 200px;
+// }
+
+// picture {
+//   height: auto;
+// }

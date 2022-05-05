@@ -1,0 +1,56 @@
+body {
+  font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-size: var(--font-size);
+  line-height: 1.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  max-width: 60ch;
+  line-height: 1.2em;
+  padding-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: calc(2 * var(--font-size));
+  font-weight: 400;
+}
+
+h2 {
+  font-size: calc(1.6 * var(--font-size));
+  font-weight: 300;
+}
+
+h3 {
+  font-size: calc(1.4 * var(--font-size));
+}
+
+h4 {
+  font-size: calc(1.2 * var(--font-size));
+}
+
+h5 {
+  font-size: calc(1.1 * var(--font-size));
+}
+
+h6 {
+  font-size: calc(var(--font-size));
+}
+
+p,
+li {
+  font-size: calc(0.8 * var(--font-size));
+  max-width: 60ch;
+  margin: auto;
+  padding-bottom: 0.5rem;
+}
+
+form {
+  font-size: calc(0.8 * var(--font-size));
+}

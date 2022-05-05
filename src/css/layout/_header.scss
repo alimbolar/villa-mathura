@@ -1,0 +1,20 @@
+header {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2.3rem);
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 1.5rem 0 0.8rem;
+
+  .logo {
+    width: 10rem;
+    aspect-ratio: 300/96;
+  }
+}
