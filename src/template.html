@@ -63,14 +63,33 @@
       <hr id="about-us" />
 
       <section class="about-us">
-        <h2>Our Family</h2>
+        <article>
+          <figure class="hero__image">
+            <picture>
+              <source
+                media="(min-width: 1400px)"
+                srcset="./images/family.jpg"
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/family.jpg"
+              />
+              <source media="(min-width: 800px)" srcset="./images/family.jpg" />
+              <source media="(min-width: 600px)" srcset="./images/family.jpg" />
+              <img src="./images/family.jpg" alt="" />
+            </picture>
+          </figure>
+        </article>
+        <div>
+          <h2>Our Family</h2>
 
-        <p>
-          Our family is actually the whole village as we believe in community
-          living. However during your stay here, it would be me, Made, along
-          with my wife Astiti and my daughter Chiara who would host you during
-          your stay at our villa.
-        </p>
+          <p>
+            Our family is actually the whole village as we believe in community
+            living. However during your stay here, it would be me, Made, along
+            with my wife Astiti and my daughter Chiara who would host you during
+            your stay at our villa.
+          </p>
+        </div>
       </section>
       <hr id="rooms" />
 
@@ -173,8 +192,11 @@
       <section class="services grid">
         <h2>Our Services</h2>
 
-        <article class="services__single">
+        <article class="service">
           <h5>Airport Transfers</h5>
+          <span class="icon">
+            <i class="fa-solid fa-plane-departure"></i>
+          </span>
 
           <p>
             We have the option to pick up and drop off all our guests to the
@@ -182,20 +204,29 @@
           </p>
         </article>
 
-        <article class="services__single">
+        <article class="service">
           <h5>Vehicle Hiring</h5>
+          <span class="icon">
+            <i class="fa-solid fa-car-side"></i>
+          </span>
           <p>
             Whether you need a car, a scooter or a bicycle, we'll organise it
             for you.
           </p>
         </article>
 
-        <article class="services__single">
+        <article class="service">
           <h5>Laundry Services</h5>
+          <span class="icon">
+            <i class="fa-solid fa-dryer"></i>
+          </span>
           <p>Leave all your washing woes to us and enjoy your holidays!</p>
         </article>
-        <article class="services__single">
+        <article class="service">
           <h5>Cooking Classes</h5>
+          <span class="icon">
+            <i class="fa-solid fa-cauldron"></i>
+          </span>
           <p>
             If cooking balinese cuisine is something you'd like to experiment
             with, we organise it for you at our family home.
