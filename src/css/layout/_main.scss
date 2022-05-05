@@ -26,6 +26,9 @@ hr {
 }
 
 .rooms {
+  .amenity {
+    padding-block: 1rem;
+  }
   .icon {
     color: var(--primary-color-light);
     font-size: calc(3 * var(--font-size));
