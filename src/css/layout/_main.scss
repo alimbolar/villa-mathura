@@ -18,3 +18,9 @@ main {
 .contact-us {
   text-align: center;
 }
+
+hr {
+  border: 1px dotted var(--primary-color-light);
+  margin-block: 5rem;
+  max-width: 20rem;
+}

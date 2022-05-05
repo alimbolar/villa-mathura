@@ -36,8 +36,11 @@
     &:after {
       top: calc((-2.7 * var(--thickness-ratio)) * var(--menu-width));
     }
+  }
 
-    &.toggled {
+  &.toggled {
+    background-color: var(--primary-color-light);
+    span {
       background: transparent;
 
       &::before {
