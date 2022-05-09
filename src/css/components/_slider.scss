@@ -1,7 +1,15 @@
 .slider {
   position: relative;
   width: 100%;
-  height: 400px;
+  aspect-ratio: 3/2;
+  // fallback
+  @supports not (aspect-ratio: auto) {
+    height: 300px;
+
+    @media (min-width: 800px) {
+      height: 500px;
+    }
+  }
 
   > figure {
     position: absolute;
