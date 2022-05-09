@@ -13,8 +13,9 @@ menu.addEventListener("click", toggleNav);
 
 // SLIDER
 
-const slider = document.querySelector(".slider");
+let slider = document.querySelector(".slider");
 
+console.log(slider);
 let slides = slider.querySelectorAll("figure");
 
 let currSlide = 0;
@@ -34,6 +35,7 @@ const nextSlide = () => {
   } else {
     currSlide++;
   }
+  console.log("next");
   goToSlide(currSlide);
 };
 
@@ -57,7 +59,7 @@ rightArrow.addEventListener("click", previousSlide);
 // CONTINOUS SLIDE EXPERIMENT
 
 let count = 0;
-const maxAnimates = 2;
+const maxAnimates = 3;
 
 const animateSlide = () => {
   // continueSlide();
@@ -66,16 +68,6 @@ const animateSlide = () => {
   if (count <= maxAnimates) {
     setTimeout(animateSlide, 2000);
     count = count + 1 / slides.length;
-  }
-};
-
-const continueSlide = () => {
-  if (currSlide === 3) {
-    currSlide = 0;
-    goToSlide();
-  } else {
-    currSlide++;
-    goToSlide(currSlide);
   }
 };
 
