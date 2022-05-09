@@ -79,7 +79,7 @@ const continueSlide = () => {
   }
 };
 
-// animateSlide();
+animateSlide();
 
 // Animating visibility
 
