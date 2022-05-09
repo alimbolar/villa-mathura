@@ -12,7 +12,9 @@ module.exports = {
     assetModuleFilename: "./assets/images/[name][ext][query]",
   },
   devServer: {
-    static: { directory: path.resolve(__dirname, "build") },
+    static: {
+      directory: path.join(__dirname, "build"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "./src/template.html" }),

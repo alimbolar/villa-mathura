@@ -29,6 +29,23 @@ hr {
 .service {
   padding-block: 1rem;
 }
+
+.service {
+  opacity: 0;
+  transition: opacity 1s;
+  &.show {
+    opacity: 1;
+  }
+}
+
+.amenity {
+  transform: scale(0);
+  transition: transform 1s;
+  &.show {
+    transform: scale(1);
+  }
+}
+
 .icon {
   color: var(--primary-color-light);
   font-size: calc(3 * var(--font-size));
