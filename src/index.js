@@ -15,7 +15,6 @@ menu.addEventListener("click", toggleNav);
 
 let slider = document.querySelector(".slider");
 
-console.log(slider);
 let slides = slider.querySelectorAll("figure");
 
 let currSlide = 0;
@@ -27,15 +26,12 @@ const goToSlide = (currSlide = 0) => {
   });
 };
 
-goToSlide();
-
 const nextSlide = () => {
   if (currSlide >= maxSlides) {
     currSlide = 0;
   } else {
     currSlide++;
   }
-  console.log("next");
   goToSlide(currSlide);
 };
 
@@ -50,19 +46,20 @@ const previousSlide = () => {
 
 const leftArrow = document.querySelector(".arrow.left");
 
-leftArrow.addEventListener("click", nextSlide);
+leftArrow.addEventListener("click", previousSlide);
 
 const rightArrow = document.querySelector(".arrow.right");
 
-rightArrow.addEventListener("click", previousSlide);
+rightArrow.addEventListener("click", nextSlide);
+
+goToSlide();
 
 // CONTINOUS SLIDE EXPERIMENT
 
-let count = 0;
-const maxAnimates = 3;
+let count = -((1 / slides.length) * 2); // setting to stop the animation at the first image
+const maxAnimates = 2;
 
 const animateSlide = () => {
-  // continueSlide();
   nextSlide();
 
   if (count <= maxAnimates) {
