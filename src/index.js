@@ -116,7 +116,7 @@ function submitMessage(event) {
   formData.append("recipient", "piladanaimade@gmail.com");
   formData.append("subject", "Message from website submission");
 
-  const message = Object.fromEntries(formData);
+  const messageData = Object.fromEntries(formData);
 
   console.log(message);
 
@@ -126,7 +126,7 @@ function submitMessage(event) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(message),
+    body: JSON.stringify(messageData),
   };
 
   const url = "https://alimbolar.cyclic.app/api/v1/mails/sendContactUsMessage";
