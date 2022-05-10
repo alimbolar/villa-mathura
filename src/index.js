@@ -139,6 +139,7 @@ function submitMessage(event) {
         this.style.opacity = 0;
         contactUsContent.style.opacity = 0;
         messageHeadline.textContent = data.message;
+        messageHeadline.setAttribute("style", "white-space:pre;");
       }
     });
 }
