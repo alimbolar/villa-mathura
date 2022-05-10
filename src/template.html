@@ -327,7 +327,12 @@
           else that might help your stay in Ubud, please send us a message by
           submitting the form below.
         </p>
-        <form>
+        <form
+          action="https:/alimbolar.cyclic.app/mail/sendContactUsMessage"
+          id="message"
+          method="POST"
+          enctype="multipart/form-data"
+        >
           <h6>Send us a message</h6>
           <input type="text" name="name" placeholder="Your Full Name" />
           <input type="email" name="email" placeholder="Your Email Address" />

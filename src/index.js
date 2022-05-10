@@ -97,3 +97,40 @@ amenities.forEach((amenity, index) => {
   // console.log(index);
   observer.observe(amenity);
 });
+
+// SEND MESSAGE
+
+const form = document.querySelector("#message");
+console.log(form);
+
+// form.submit();
+
+function submitMessage(event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  formData.append("recipient", "alimbolar@gmail.com");
+  formData.append("subject", "Message from website submission");
+
+  const message = Object.fromEntries(formData);
+
+  console.log(message);
+
+  const options = {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "applicationj/json",
+    },
+    body: JSON.stringify(message),
+  };
+
+  const url = "https://alimbolar.cyclic.app/mail/sendContactUsMessage";
+
+  fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => console.log(data.status, data.message));
+}
+
+form.addEventListener("submit", submitMessage);
