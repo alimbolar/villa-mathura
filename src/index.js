@@ -105,6 +105,9 @@ console.log(form);
 
 // form.submit();
 
+const messageHeadline = document.querySelector(".messageHeadline");
+const contactUsContent = document.querySelector(".contact-us__content");
+
 function submitMessage(event) {
   event.preventDefault();
 
@@ -121,16 +124,23 @@ function submitMessage(event) {
     method: "POST",
     mode: "cors",
     headers: {
-      "Content-Type": "applicationj/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(message),
   };
 
-  const url = "https://alimbolar.cyclic.app/mail/sendContactUsMessage";
+  const url = "https://alimbolar.cyclic.app/api/v1/mails/sendContactUsMessage";
 
   fetch(url, options)
     .then((response) => response.json())
-    .then((data) => console.log(data.status, data.message));
+    .then((data) => {
+      console.log(data.status, data.message);
+      if (data.status == "success") {
+        this.style.opacity = 0;
+        contactUsContent.style.opacity = 0;
+        messageHeadline.textContent = data.message;
+      }
+    });
 }
 
 form.addEventListener("submit", submitMessage);

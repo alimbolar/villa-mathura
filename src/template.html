@@ -319,28 +319,29 @@
       <hr id="contact-us" />
 
       <section class="contact-us">
-        <h2>Contact Us</h2>
+        <article class="contact-us__content">
+          <h2>Contact Us</h2>
 
-        <p>We'd love to hear from you.</p>
-        <p>
-          If you'd like to have some information about our villas or anything
-          else that might help your stay in Ubud, please send us a message by
-          submitting the form below.
-        </p>
+          <p>We'd love to hear from you.</p>
+          <p>
+            If you'd like to have some information about our villas or anything
+            else that might help your stay in Ubud, please send us a message by
+            submitting the form below.
+          </p>
+        </article>
+        <h6 class="messageHeadline">Send us a message</h6>
         <form
           action="https:/alimbolar.cyclic.app/mail/sendContactUsMessage"
           id="message"
           method="POST"
           enctype="multipart/form-data"
         >
-          <h6>Send us a message</h6>
           <input type="text" name="name" placeholder="Your Full Name" />
           <input type="email" name="email" placeholder="Your Email Address" />
           <input type="tel" name="mobile" placeholder="Your Whatsapp Number" />
           <textarea name="message" id="" cols="30" rows="10"></textarea>
           <button type="submit">Submit</button>
         </form>
-        <h6>We look forward to hosting you at our home.</h6>
       </section>
       <footer></footer>
     </main>
