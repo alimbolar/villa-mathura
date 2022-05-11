@@ -132,7 +132,7 @@ function submitMessage(event) {
   fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.status, data.data);
+      console.log(data);
       if (data.status == "success") {
         this.style.opacity = 0;
         contactUsContent.style.opacity = 0;
