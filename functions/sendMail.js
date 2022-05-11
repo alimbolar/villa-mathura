@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv").config();
 
 const mailConfig = {
   host: "smtp.mailgun.org",
