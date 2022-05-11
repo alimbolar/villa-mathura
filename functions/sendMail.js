@@ -66,7 +66,7 @@ exports.handler = function (event, context, callback) {
         callback(null, {
           statusCode: 200,
           body: JSON.stringify({
-            status: 200,
+            status: "success",
             data: "Thanks for contacting us. \r\n We will get back to you soon. \r\n \r\nWe look forward to hosting you at our home.",
           }),
         });
@@ -76,7 +76,7 @@ exports.handler = function (event, context, callback) {
     callback(null, {
       statusCode: 400,
       body: JSON.stringify({
-        status: 400,
+        status: "fail",
         data: `Sorry. Could not submit message due to error : ${error}. \r\n Please try again later. \r\n Or contact us on our WhatsApp number`,
       }),
     });
