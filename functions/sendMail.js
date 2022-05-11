@@ -6,8 +6,8 @@ const mailConfig = {
   port: 465,
   secure: true,
   auth: {
-    user: MAILGUN_USER,
-    pass: MAILGUN_PASSWORD,
+    user: process.env.MAILGUN_USER,
+    pass: process.env.MAILGUN_PASSWORD,
   },
 };
 
