@@ -100,8 +100,7 @@ amenities.forEach((amenity, index) => {
 
 // SEND MESSAGE
 
-const form = document.querySelector("#message");
-console.log(form);
+const form = document.querySelector("#form");
 
 // form.submit();
 
@@ -129,16 +128,17 @@ function submitMessage(event) {
     body: JSON.stringify(messageData),
   };
 
-  const url = "https://alimbolar.cyclic.app/api/v1/mails/sendContactUsMessage";
+  // const url = "https://alimbolar.cyclic.app/api/v1/mails/sendContactUsMessage";
+  const url = ".netlify/functions/sendMail";
 
   fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.status, data.message);
+      console.log(data.status, data.data);
       if (data.status == "success") {
         this.style.opacity = 0;
         contactUsContent.style.opacity = 0;
-        messageHeadline.textContent = data.message;
+        messageHeadline.textContent = data.data;
         messageHeadline.setAttribute("style", "white-space:pre;");
       }
     });
