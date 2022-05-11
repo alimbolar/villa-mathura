@@ -23,7 +23,12 @@ exports.handler = function (event, context, callback) {
       }
     });
 
-    const { name, email, message, mobile, subject, recipient } = event.body;
+    const messageData = JSON.parse(event.body);
+
+    const { name, email, message, mobile, subject, recipient } = messageData;
+
+    console.log(messageData);
+    console.log(recipient);
 
     const country = event.headers["x-country"];
     const ip = event.headers["x-forwarded-for"].split(",").pop();
