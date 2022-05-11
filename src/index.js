@@ -117,8 +117,6 @@ function submitMessage(event) {
 
   const messageData = Object.fromEntries(formData);
 
-  console.log(message);
-
   const options = {
     method: "POST",
     mode: "cors",
