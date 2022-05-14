@@ -9,11 +9,11 @@ module.exports = {
     filename: "main.[hash:4].js",
     path: path.resolve(__dirname, "build"),
     clean: true,
-    assetModuleFilename: "./assets/images/[name][ext][query]",
+    assetModuleFilename: "./images/[name][ext][query]",
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "build"),
+      directory: path.join(__dirname, "src"),
     },
   },
   plugins: [
