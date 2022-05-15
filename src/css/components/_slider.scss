@@ -2,6 +2,8 @@
   position: relative;
   width: 100%;
   aspect-ratio: 3/2;
+  max-width: 50rem;
+
   // fallback
   @supports not (aspect-ratio: auto) {
     height: 300px;

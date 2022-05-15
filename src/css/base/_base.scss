@@ -23,24 +23,12 @@ h6 {
   color: var(--primary-color);
 }
 
-section {
-  margin-block-end: 3rem;
-}
-
 img {
   width: 100%;
+  display: block;
 }
 
 a {
   text-decoration: none;
   color: black;
 }
-
-// figure {
-//   width: max-content;
-//   height: 200px;
-// }
-
-// picture {
-//   height: auto;
-// }

@@ -1,23 +1,23 @@
-.hero {
-  h1,
-  p {
-    text-align: center;
-  }
-  margin: auto;
-  max-width: 72rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (min-width: 50rem) {
-    flex-direction: row;
-    > * {
-      width: 50%;
-      height: 400px;
-      // height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-}
+// .hero {
+//   h1,
+//   p {
+//     text-align: center;
+//   }
+//   margin: auto;
+//   max-width: 72rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   @media (min-width: 50rem) {
+//     flex-direction: row;
+//     > * {
+//       width: 50%;
+//       height: 400px;
+//       // height: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//     }
+//   }
+// }

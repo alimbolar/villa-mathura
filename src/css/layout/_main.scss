@@ -50,25 +50,24 @@ hr {
   font-size: calc(3 * var(--font-size));
 }
 
-// HERO SECTION
+// ALL SECTIONS IN MAIN
 
-.hero,
-.about-us {
-  h1,
-  p {
-    text-align: center;
-  }
-  margin: auto;
-  max-width: 72rem;
+main section {
+  margin-block-end: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  max-width: 72rem;
+}
+
+// HERO AND ABOUT US SECTION
+
+.main .hero,
+.main .about-us {
   @media (min-width: 50rem) {
-    flex-direction: row-reverse;
     > * {
       width: 50%;
-      height: 400px;
-      // height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -77,40 +76,14 @@ hr {
   }
 }
 
-.hero {
+.main .hero {
   @media (min-width: 50rem) {
     flex-direction: row;
   }
 }
 
-// OUR ROOMS
-
-.rooms,
-.services,
-.booking,
-.contact-us {
-  .slider {
-    max-width: 50rem;
-  }
-  h1,
-  p {
-    text-align: center;
-  }
-  margin: auto;
-  max-width: 72rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.main .about-us {
   @media (min-width: 50rem) {
-    flex-direction: column;
-    > * {
-      width: 50%;
-      // height: 400px;
-      // height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+    flex-direction: row-reverse;
   }
 }
