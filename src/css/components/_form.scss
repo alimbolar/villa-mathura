@@ -22,6 +22,7 @@ form {
     border-bottom: 1px solid #c0c0c0;
     box-shadow: none;
     margin: 0.5rem 0rem;
+    transition: 0.7s;
 
     &::placeholder {
       color: gray;
