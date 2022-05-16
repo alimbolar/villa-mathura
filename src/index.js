@@ -101,14 +101,21 @@ amenities.forEach((amenity, index) => {
 // SEND MESSAGE
 
 const form = document.querySelector("#form");
+const formButton = form.querySelector("button");
 
 // form.submit();
 
 const messageHeadline = document.querySelector(".messageHeadline");
 const contactUsContent = document.querySelector(".contact-us__content");
 
+formButton.addEventListener("transitionend", () => {
+  formButton.classList.remove("clicked");
+});
+
 function submitMessage(event) {
   event.preventDefault();
+
+  formButton.classList.add("clicked");
 
   const formData = new FormData(form);
 
