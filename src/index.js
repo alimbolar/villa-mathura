@@ -57,7 +57,7 @@ goToSlide();
 // CONTINOUS SLIDE EXPERIMENT
 
 let count = -((1 / slides.length) * 2); // setting to stop the animation at the first image
-const maxAnimates = 2;
+const maxAnimates = 4;
 
 const animateSlide = () => {
   nextSlide();

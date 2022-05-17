@@ -1,6 +1,9 @@
 .menu {
   --menu-width: 2.5rem;
   --thickness-ratio: 0.1;
+  --shiftup: calc((-2.7 * var(--thickness-ratio)) * var(--menu-width));
+  --shiftdown: calc((2.7 * var(--thickness-ratio)) * var(--menu-width));
+
   width: var(--menu-width);
   height: var(--menu-width);
   // border-radius: 1rem;
@@ -9,6 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  position: relative;
 
   span {
     width: 66%;
@@ -31,10 +36,10 @@
     }
 
     &:before {
-      top: calc((2.7 * var(--thickness-ratio)) * var(--menu-width));
+      top: var(--shiftup);
     }
     &:after {
-      top: calc((-2.7 * var(--thickness-ratio)) * var(--menu-width));
+      top: var(--shiftdown);
     }
   }
 
@@ -44,10 +49,12 @@
       background: transparent;
 
       &::before {
-        transform: rotate(45deg) translate(-0.5em, -0.5em);
+        top: 0;
+        transform: rotate(45deg);
       }
       &::after {
-        transform: rotate(-45deg) translate(-0.5em, 0.5em);
+        top: 0;
+        transform: rotate(-45deg);
 
         // background-color: black;
       }
